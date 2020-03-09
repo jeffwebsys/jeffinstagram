@@ -16,7 +16,7 @@
              <label for="title" class="col-md-4 col-form-label">Enter title</label>
 
                            
-              <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}" autocomplete="title" autofocus>
+              <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title')  ?? $user->profile->title }}" autocomplete="title" autofocus>
 
               @error('title')
               <span class="invalid-feedback" role="alert">
@@ -29,7 +29,7 @@
              <label for="description" class="col-md-4 col-form-label">Enter description</label>
 
                            
-              <input id="description" type="text" class="form-control @error('description') is-invalid @enderror" name="description" value="{{ old('description') }}" autocomplete="description" autofocus>
+              <input id="description" type="text" class="form-control @error('description') is-invalid @enderror" name="description" value="{{ old('description')  ??  $user->profile->description }}" autocomplete="description" autofocus>
 
               @error('description')
               <span class="invalid-feedback" role="alert">
@@ -42,7 +42,7 @@
              <label for="url" class="col-md-4 col-form-label">Enter URL</label>
 
                            
-              <input id="url" type="text" class="form-control @error('url') is-invalid @enderror" name="url" value="{{ old('url') }}" autocomplete="url" autofocus>
+              <input id="url" type="text" class="form-control @error('url') is-invalid @enderror" name="url" value="{{ old('url') ??  $user->profile->url }}" autocomplete="url" autofocus>
 
               @error('url')
               <span class="invalid-feedback" role="alert">
