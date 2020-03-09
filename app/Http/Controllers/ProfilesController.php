@@ -14,9 +14,13 @@ class ProfilesController extends Controller
 
     	$this->middleware('auth');
     }
-    public function index($user)
+    public function index(User $user)
     {
-    	$user = User::findOrfail($user);
+    	
         return view('profiles.index',compact('user'));
+    }
+    public function edit(User $user)
+    {
+    	return view('profiles.edit',compact('user'));
     }
 }

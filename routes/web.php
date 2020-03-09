@@ -23,3 +23,4 @@ Route::get('/p/{post}','PostsController@show');
 
 
 Route::get('/profile/{user}', 'ProfilesController@index');
+Route::get('/profile/{user}/edit', 'ProfilesController@edit');
