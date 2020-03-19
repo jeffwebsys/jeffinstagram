@@ -50,7 +50,7 @@ class User extends Authenticatable
                 'description' => 'Jeremiah 29:11',
             ]);
 
-
+            //send an email to user who just signed up
             Mail::to($user->email)->send(new NewUserWelcomeMail());
         });
 
