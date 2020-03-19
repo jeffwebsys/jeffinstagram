@@ -19,7 +19,9 @@ class PostsController extends Controller
     //fetching all the related user id that you follows
     $users = auth()->user()->following()->pluck('profiles.user_id');
     //we can use latest() function to and replace orderBy query
-    $posts = Post::whereIn('user_id', $users)->orderBy('created_at','DESC')->paginate(3);
+    $posts = Post::whereIn('user_id', $users)->with('user')->orderBy('created_at','DESC')->paginate(3);
+
+    
     
     return view('posts.index',compact('posts'));
 
