@@ -1,5 +1,6 @@
 # Laravel Instagram App
+I hardcoded this by watching Victor's freecodegram Laravel tutorial on Youtube.
 
-This is made by Mr.Victor a Professional PHP developer. I hardcoded by watching his full steps on developing a full blown laravel clone Instagram App.
+The version that he used in the tutorial was Laravel 5.8 and I converted it to Laravel 6 with few modifications added
 
-Thank you.
+Thank you and Godbless.
